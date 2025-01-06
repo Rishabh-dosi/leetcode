@@ -21,13 +21,9 @@ public class ShiftingLetter2 {
         // Construct the result string after applying the shift to each character.
         StringBuilder resultStringBuilder = new StringBuilder();
         for (int i = 0; i < stringLength; ++i) {
-            // Calculate the new character by shifting the current character accordingly.
-            // The mod operation keeps the result within the range of the alphabet,
-            // and the addition of 26 before mod ensures the number is positive.
             int shiftedIndex = (s.charAt(i) - 'a' + netShifts[i] % 26 + 26) % 26;
             resultStringBuilder.append((char) ('a' + shiftedIndex));
         }
-        // Convert the StringBuilder to a String and return the result.
         return resultStringBuilder.toString();
     }
     
