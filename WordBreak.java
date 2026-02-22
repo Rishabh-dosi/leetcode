@@ -20,7 +20,6 @@ public class WordBreak {
             return true;
         }
     
-
         if (t[i]) {
             return true;
         }
